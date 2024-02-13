@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary Planner</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      <center><h2>Travel Itinerary Planner </h2></center>
+      <button value="addData" onclick="formDisplay()" id="add">ADD</button>
+    <form id="travelForm" style="display: none;">
+        <b><label for="fromDestination">From Destination:</label></b>
+        <input type="text" id="fromDestination" name="fromDestination" required><br><br>
+    
+        <b><label for="toDestination">To Destination:</label></b>
+        <input type="text" id="toDestination" name="toDestination" required><br><br>
+    
+        <i><b><p>Note: Plz enter Days in range of 1-45</p></b></i>
+        <b><label for="duration">Duration (days):</label></b>
+        <input type="number" id="duration" name="duration" min="1" max="45" required><br><br>
+        
+    
+        <b><label for="type">Destination Types:</label><br></b>
+        <input type="checkbox" id="beach" name="type" value="Beach">
+        <label for="beach">Beach</label><br>
+        <input type="checkbox" id="mtn" name="type" value="Mountain">
+        <label for="mountain">Mountain</label><br>
+        <input type="checkbox" id="city" name="type" value="City">
+        <label for="city">City</label><br>
+        <input type="checkbox" id="countryside" name="type" value="Countryside">
+        <label for="countryside">Country Side</label><br>
+        <label for="other">Other:</label>
+        <input type="text" id="other" name="type"><br><br>
+    
+        <b><label for="travelMode">Travel Mode:</label><br></b>
+        <input type="radio" id="flight" name="travelMode" value="Flight">
+        <label for="flight">Flight</label><br>
+        <input type="radio" id="road" name="travelMode" value="Road">
+        <label for="road">Road</label><br><br>
+
+        <b><label for="tripDetails">Trip Details:</label><br></b>
+        <b><label for="destination">Destination:</label></b>
+        <input type="text" id="destination" name="destination" required><br><br>
+        <b><label for="hotel">Hotel:</label></b>
+        <input type="text" id="hotel" name="hotel" required><br><br>
+
+        <input type="submit" value="Submit" onclick="tblDisplay()">
+
+        <!-- <input type="submit" value="Update" id="updatebtn" onclick="UpdatedForm(id)"> -->
+        <input type="submit" value="Update" id="updatebtn">
+
+
+    </form>
+
+    <table border="2" id="tbl1">
+        <tr>
+            <th>Id</th>
+            <th>Pickup</th>
+            <th>Destination</th>
+            <th>Dur</th>
+            <th>Dest_type</th>
+            <th>Travel mode</th>
+            <th>Destination</th>
+            <th>Hotel</th>
+            <th>Action</th>
+        </tr>
+        <tbody id="tbl2">
+
+        </tbody>
+        <button onclick="displaysort()" id="sorttbl">SortTable</button>
+
+
+        <b> <p id="ttl">Total Trips: <span id="totalTrips">0</span></p> </b>  
+        <b><p id="dur1">Total Duration: <span id="totalDuration">0</span></p></b>
+    </table><br><br>
+    <script src="script.js"></script>
+        <!-- // <script src="new.js"></script>  -->
+       
+ </body>
+</html>
